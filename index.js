@@ -41,7 +41,7 @@ app.post('/recipes', jsonParser, function(request, response) {
         // If a tag already exists, then associate it with the current recipe in the RECIPES_TAGS table
         // Else insert tag into TAG table, then associate it with the current recipe in the RECIPES_TAGS table
         
-        // knex.raw('insert into tags (tag) select * from (values (?) as newTags) except (select tag from tags);', [request.body.tags]).then();
+        //knex.raw('insert into tags (tag) select * from (values (?) as newTags) except (select tag from tags);', [request.body.tags]).then();
         
         // for newtag in request.body.tags: select * from tags where tag = $newtag$ --> if 0 results, insert into tags (tag) values ($newtag$)
         
